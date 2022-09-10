@@ -7,3 +7,6 @@ curl -L "https://cdn.jsdelivr.net/npm/highlightjs-apex@1/dist/apex.min.js" >> "d
 curl -L "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11/build/highlight.min.js" -o "docs/assets/highlight.js"
 echo >> "docs/assets/highlight.js"
 curl -L "https://cdn.jsdelivr.net/npm/highlightjs-apex@1/dist/apex.min.js" >> "docs/assets/highlight.js"
+
+git add doc-assets/highlight.js
+git add docs/assets/highlight.js
