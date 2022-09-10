@@ -16,41 +16,42 @@
 		"apex:local:stop": "node node_modules/prettier-plugin-apex/bin/stop-apex-server.js",
 		"apex:test:local": "rm testresults/* && sfdx force:apex:test:run -l RunLocalTests -d testresults -r human -c",
 		"initialize": ". scripts/initialize.sh",
-		"pmd:scan:csv": "$HOME/pmd/bin/run.sh pmd -d sfdx-source -R pmd/ruleset.xml -f csv -r pmd/pmd.csv --cache .pmdCache --short-names",
-		"pmd:scan:deploy:csv": "$HOME/pmd/bin/run.sh pmd -d sfdx-source -R pmd/deployRules.xml -f csv -r pmd/deploy.csv --cache .pmdCache --short-names",
+		"pmd:scan:csv": "$HOME/pmd/bin/run.sh pmd -d force-app -R pmd/ruleset.xml -f csv -r pmd/pmd.csv --cache .pmdCache --short-names",
+		"pmd:scan:deploy:csv": "$HOME/pmd/bin/run.sh pmd -d force-app -R pmd/deployRules.xml -f csv -r pmd/deploy.csv --cache .pmdCache --short-names",
 		"precommit": "lint-staged",
 		"prepare": "husky install",
-		"prettier:apex:local": "prettier --apex-standalone-parser built-in --write \"sfdx-source/**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,yaml,yml}\"",
+		"prettier:apex:local": "prettier --apex-standalone-parser built-in --write \"force-app/**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,yaml,yml}\"",
 		"prettier:docs": ". doc-assets/docscleanup.sh | prettier --write \"docs/*.html\"",
-		"prettier:verify:apex:local": "prettier --apex-standalone-parser built-in --list-different \"sfdx-source/**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,yaml,yml}\"",
+		"prettier:verify:apex:local": "prettier --apex-standalone-parser built-in --list-different \"force-app/**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,yaml,yml}\"",
 		"prettier:verify": "prettier --list-different \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
 		"prettier": "prettier --write \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
 		"scratchorg": ". scripts/orginit.sh",
+		"setDevHub": "sfdx config:set defaultdevhubusername=x2od",
 		"updateHighlight": ". scripts/updateHighlight.sh",
 		"version": "auto-changelog && git add CHANGELOG.md"
 	},
 	"devDependencies": {
-		"@lwc/eslint-plugin-lwc": "^1.3.0",
+		"@lwc/eslint-plugin-lwc": "^1.4.0",
 		"@prettier/plugin-xml": "^2.2.0",
-		"@salesforce/eslint-config-lwc": "^3.3.2",
+		"@salesforce/eslint-config-lwc": "^3.3.3",
 		"@salesforce/eslint-plugin-lightning": "^1.0.0",
-		"@salesforce/sfdx-lwc-jest": "^1.1.0",
-		"eslint": "^8.18.0",
+		"@salesforce/sfdx-lwc-jest": "^1.1.3",
+		"eslint": "^8.23.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-import": "^2.26.0",
-		"eslint-plugin-jest": "^26.5.3",
-		"eslint-plugin-prettier": "^4.0.0",
+		"eslint-plugin-jest": "^27.0.4",
+		"eslint-plugin-prettier": "^4.2.1",
 		"husky": "^8.0.1",
-		"lint-staged": "^13.0.2",
+		"lint-staged": "^13.0.3",
 		"prettier": "^2.7.1",
 		"prettier-plugin-apex": "^1.10.0",
 		"prettier-plugin-xml": "^0.1.0"
 	},
 	"lint-staged": {
-		"sfdx-source/**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,yaml,yml}": [
+		"force-app/**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,yaml,yml}": [
 			"prettier --write"
 		],
-		"sfdx-source/**/{aura,lwc}/**": [
+		"force-app/**/{aura,lwc}/**": [
 			"eslint"
 		],
 		"docs/assets/*.css": [

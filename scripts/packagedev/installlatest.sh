@@ -26,7 +26,7 @@ echo "Installing version $VERSIONNUMBER with package version $PACKAGEVERSIONID"
 sfdx force:package:install --package $PACKAGEVERSIONID -u PackageInstallTest -w 20
 
 echo "Adding unmanaged extension metadata"
-sfdx force:source:deploy -p sfdx-source/unmanagedExtension -u PackageInstallTest
+sfdx force:source:deploy -p force-app/unmanagedExtension -u PackageInstallTest
 
 echo "Install sample data"
 sfdx force:apex:execute -f ./data/sample-data-managed.apex

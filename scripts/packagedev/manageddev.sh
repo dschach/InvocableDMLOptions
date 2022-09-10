@@ -14,7 +14,7 @@ echo "Pushing managed metadata"
 sfdx force:source:deploy -p force-app --tracksource
 
 echo "Deploy unmanaged metadata"
-sfdx force:source:deploy -p sfdx-source/unmanaged --tracksource
+sfdx force:source:deploy -p force-app/unmanaged --tracksource
 
 echo "Assigning permission set"
 sfdx force:user:permset:assign -n Action_Plans_Admin

@@ -5,7 +5,7 @@ on:
   pull_request:
     types: [edited, opened, synchronize, reopened, review_requested]
     paths:
-      - 'sfdx-source/**'
+      - 'force-app/**'
       - 'pmd/**'
   workflow_dispatch:
 # Jobs to be executed

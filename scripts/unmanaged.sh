@@ -19,7 +19,7 @@ sfdx force:apex:execute -f ./data/sample-data.apex
 
 # To install sample Flow and other metadata
 echo "deploying sample metadata"
-sfdx force:source:deploy -p sfdx-source/unmanaged
+sfdx force:source:deploy -p force-app/unmanaged
 
 echo "opening org..."
 sfdx force:org:open

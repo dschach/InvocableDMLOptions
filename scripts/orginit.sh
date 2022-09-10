@@ -1,13 +1,13 @@
 #!/bin/bash
 
-echo "Clearing namespace"
-sed -i "" "s|\"namespace\": \"\"|\"namespace\": \"\"|" sfdx-project.json
+echo "Set Dev Hub"
+npm run setDevHub
 
 echo "Cleaning previous scratch org..."
-sfdx force:org:delete -p -u ScratchOrg
+sfdx force:org:delete -p -u DMLOptionsOrg
 
 echo "Creating new scratch org"
-sfdx force:org:create -f config/project-scratch-def.json --durationdays 10 -a ScratchOrg -s
+sfdx force:org:create -f config/project-scratch-def.json --durationdays 21 -a DMLOptionsOrg -s
 
 echo "Pushing metadata"
 sfdx force:source:push
