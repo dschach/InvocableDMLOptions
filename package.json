@@ -45,8 +45,7 @@
 		"husky": "^8.0.1",
 		"lint-staged": "^13.0.3",
 		"prettier": "^2.7.1",
-		"prettier-plugin-apex": "^1.11.0",
-		"prettier-plugin-xml": "^0.1.0"
+		"prettier-plugin-apex": "^1.11.0"
 	},
 	"lint-staged": {
 		"force-app/**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,yaml,yml}": [
