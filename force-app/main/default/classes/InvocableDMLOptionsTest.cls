@@ -29,8 +29,8 @@ private class InvocableDMLOptionsTest {
 		dmor.localeOptions = 'en_US';
 		dmor.optAllOrNone = true;
 		dmor.inputRecord = l;
-		List<InvocableDMLOptions.DMLOptionRequest> dmlorList = new List<InvocableDMLOptions.DMLOptionRequest>{ dmor };
-		List<InvocableDMLOptions.DMLOptionResult> results = InvocableDMLOptions.execute(dmlorList);
+		List<InvocableDMLOptions.DMLOptionRequest> dmlorList = new List<InvocableDMLOptions.DMLOptionRequest>{ dmor }; //NOPMD
+		List<InvocableDMLOptions.DMLOptionResult> results = InvocableDMLOptions.execute(dmlorList); //NOPMD
 	}
 
 	@isTest
@@ -48,7 +48,7 @@ private class InvocableDMLOptionsTest {
 		dmor.localeOptions = null;
 		dmor.optAllOrNone = false;
 		dmor.inputRecord = l;
-		List<InvocableDMLOptions.DMLOptionRequest> dmlorList = new List<InvocableDMLOptions.DMLOptionRequest>{ dmor };
-		List<InvocableDMLOptions.DMLOptionResult> results = InvocableDMLOptions.execute(dmlorList);
+		List<InvocableDMLOptions.DMLOptionRequest> dmlorList = new List<InvocableDMLOptions.DMLOptionRequest>{ dmor }; //NOPMD
+		List<InvocableDMLOptions.DMLOptionResult> results = InvocableDMLOptions.execute(dmlorList); //NOPMD
 	}
 }

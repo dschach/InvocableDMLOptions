@@ -4,6 +4,7 @@
  * @author David Schach
  * @since  2022
  */
+@SuppressWarnings('PMD.AvoidGlobalModifier')
 global with sharing class InvocableDMLOptions {
 	/**
 	 * Invocable method to add DMLOptions to a list of SObjects
